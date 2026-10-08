@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UMKM Purbalingga</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <a href="#" class="logo">
+        <span class="logo-icon">🌿</span>
+
+        <span>
+            UMKM <b>Purbalingga</b>
+            <small>Dari Desa, Untuk Indonesia</small>
+        </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="navMenu">
+        <a href="#beranda">Beranda</a>
+        <a href="#kategori">Kategori</a>
+        <a href="#produk">Produk</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#keranjang">🛒 Pesanan</a>
+    </nav>
+
+    <button class="cart-button" id="cartButton">
+        🛒 <span id="cartCount">0</span>
+    </button>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="beranda">
+
+    <div class="hero-content">
+
+        <span class="badge">💚 Dukung UMKM Lokal</span>
+
+        <h1>
+            Produk Lokal,
+            <br>
+            <span>Kualitas Juara!</span>
+        </h1>
+
+        <p>
+            Temukan produk unggulan dari UMKM Purbalingga.
+            Mulai dari makanan, minuman, sayuran,
+            hingga kerajinan tangan.
+        </p>
+
+        <a href="#produk" class="primary-button">
+            Jelajahi Produk →
+        </a>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85"
+            alt="Produk lokal">
+
+    </div>
+
+    <div class="hero-decoration">✿</div>
+
+</section>
+
+
+<!-- KEUNGGULAN -->
+<section class="benefits">
+
+    <div class="benefit">
+        <span>🌱</span>
+
+        <div>
+            <b>Produk Lokal</b>
+            <small>Karya UMKM daerah</small>
+        </div>
+    </div>
+
+    <div class="benefit">
+        <span>⭐</span>
+
+        <div>
+            <b>Produk Pilihan</b>
+            <small>Beragam produk menarik</small>
+        </div>
+    </div>
+
+    <div class="benefit">
+        <span>🤝</span>
+
+        <div>
+            <b>Dukung Pengusaha</b>
+            <small>Bantu ekonomi lokal</small>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- KATEGORI -->
+<section class="section" id="kategori">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                PILIHAN UNTUKMU
+            </span>
+
+            <h2>Jelajahi Kategori</h2>
+
+            <p>
+                Temukan produk sesuai kebutuhanmu.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="category-list">
+
+        <button class="category active" data-category="Semua">
+            ✨ Semua
+        </button>
+
+        <button class="category" data-category="Makanan">
+            🍘 Makanan
+        </button>
+
+        <button class="category" data-category="Minuman">
+            🥤 Minuman
+        </button>
+
+        <button class="category" data-category="Sayuran">
+            🥬 Sayuran
+        </button>
+
+        <button class="category" data-category="Kerajinan">
+            🧺 Kerajinan
+        </button>
+
+        <button class="category" data-category="Fashion">
+            👜 Fashion
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUK -->
+<section class="section products-section" id="produk">
+
+    <div class="section-heading product-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                BUATAN LOKAL, PENUH KEBANGGAAN
+            </span>
+
+            <h2>
+                Produk Unggulan 🌿
+            </h2>
+
+            <p>
+                Pilihan produk dari UMKM Purbalingga.
+            </p>
+
+        </div>
+
+        <span class="product-total" id="productTotal">
+            0 produk
+        </span>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <span>🔎</span>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari nama produk atau UMKM..."
+        >
+
+    </div>
+
+
+    <div
+        class="product-grid"
+        id="productGrid">
+    </div>
+
+
+    <p
+        class="empty-message"
+        id="emptyMessage"
+        hidden>
+
+        Produk tidak ditemukan.
+        Coba kata kunci lain, ya!
+
+    </p>
+
+</section>
+
+
+<!-- TENTANG -->
+<section class="about-section" id="tentang">
+
+    <div class="about-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=85"
+            alt="Produk lokal">
+
+    </div>
+
+
+    <div class="about-content">
+
+        <span class="eyebrow">
+            CERITA DARI PURBALINGGA
+        </span>
+
+        <h2>
+            Belanja Lokal,
+            <br>
+            Bangga Produk Indonesia!
+        </h2>
+
+        <p>
+            UMKM Purbalingga hadir untuk memperkenalkan
+            beragam produk lokal yang dibuat dengan
+            kreativitas dan semangat para pelaku usaha daerah.
+        </p>
+
+        <p>
+            Setiap pembelian menjadi salah satu cara untuk
+            mendukung usaha lokal agar terus berkembang.
+        </p>
+
+        <a href="#produk" class="primary-button">
+            Lihat Produk →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- KERANJANG / PESANAN -->
+<section class="section cart-section" id="keranjang">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                BELANJA PILIHANMU
+            </span>
+
+            <h2>
+                Pesanan Saya 🛍
+            </h2>
+
+            <p>
+                Periksa kembali produk sebelum melakukan pemesanan.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div id="cartItems" class="cart-items">
+
+        <p class="cart-empty">
+            Belum ada pesanan.
+        </p>
+
+    </div>
+
+
+    <div class="cart-summary">
+
+        <span>
+            Total pesanan
+        </span>
+
+        <strong id="cartTotal">
+            Rp0
+        </strong>
+
+    </div>
+
+
+    <button
+        class="primary-button checkout-button"
+        id="checkoutButton">
+
+        📱 Pesan via WhatsApp →
+
+    </button>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-brand">
+
+        <span class="logo-icon">
+            🌿
+        </span>
+
+        <div>
+
+            <h3>
+                UMKM Purbalingga
+            </h3>
+
+            <p>
+                Dari Desa, Untuk Indonesia.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-text">
+
+        <p>
+            Mari dukung produk lokal dan tumbuhkan
+            ekonomi daerah bersama.
+        </p>
+
+        <small>
+            © 2026 UMKM Purbalingga | Website Katalog UMKM
+        </small>
+
+    </div>
+
+</footer>
+
+
+<button
+    id="backToTop"
+    class="back-to-top"
+    aria-label="Kembali ke atas">
+
+    ↑
+
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
