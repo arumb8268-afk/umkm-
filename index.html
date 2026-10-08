@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMIÉ STORE | Your Everyday Style</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="announcement">
+    ✨ FREE SHIPPING untuk pembelian tertentu
+  </div>
+
+  <header class="navbar">
+    <a href="#" class="logo">LUMIÉ<span>.</span></a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <button class="cart-button" id="openCart">
+      🛍️ Bag <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">YOUR EVERYDAY ESSENTIALS</span>
+        <h1>Find Your<br><em>Everyday Style.</em></h1>
+        <p>
+          Temukan koleksi pilihan yang simpel, nyaman,
+          dan membuat harimu lebih istimewa.
+        </p>
+        <a href="#products" class="primary-button">
+          Explore Collection ↗
+        </a>
+        <div class="hero-note">
+          <span>✦</span> Curated with love, made for you.
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85"
+          alt="Koleksi fashion aesthetic">
+        <div class="image-label">
+          <small>NEW COLLECTION</small>
+          <strong>Soft & Timeless</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div>✧ Curated Products</div>
+      <div>♡ Quality First</div>
+      <div>↗ Easy Shopping</div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">THE COLLECTION</span>
+          <h2>Something You'll <em>Love.</em></h2>
+          <p>Temukan barang favoritmu di sini.</p>
+        </div>
+        <span class="product-total" id="productTotal">
+          8 PRODUCTS
+        </span>
+      </div>
+
+      <div class="shop-tools">
+        <div class="categories" id="categories">
+          <button class="category active" data-category="Semua">All</button>
+          <button class="category" data-category="Fashion">Fashion</button>
+          <button class="category" data-category="Bags">Bags</button>
+          <button class="category" data-category="Accessories">Accessories</button>
+          <button class="category" data-category="Lifestyle">Lifestyle</button>
+        </div>
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Cari produk..."
+          aria-label="Cari produk">
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-message" id="emptyMessage" hidden>
+        Produk tidak ditemukan. Coba kata kunci lain, ya!
+      </p>
+    </section>
+
+    <section class="promo" id="about">
+      <div>
+        <span class="eyebrow">A LITTLE NOTE FROM US</span>
+        <h2>Simple things,<br><em>beautiful moments.</em></h2>
+      </div>
+      <p>
+        LUMIÉ STORE hadir untuk menemani keseharianmu
+        dengan pilihan produk yang simpel, menarik,
+        dan penuh gaya.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo">LUMIÉ<span>.</span></a>
+    <p>Made with ♡ for your everyday moments.</p>
+    <small>© 2026 LUMIÉ STORE. Demo website.</small>
+  </footer>
+
+  <!-- Keranjang belanja -->
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h2>Your Bag <span id="bagCount">(0)</span></h2>
+      <button id="closeCart" class="close-button"
+        aria-label="Tutup keranjang">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">Rp0</strong>
+      </div>
+      <button class="primary-button checkout-button" id="checkout">
+        Checkout ↗
+      </button>
+      <small>Demo toko online untuk belajar.</small>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
