@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMIÉ STORE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#home" class="logo">LUMIÉ<span>.</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <button id="cartButton" class="nav-cart" type="button">🛍 Bag <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+        <h1>Find your little<br><span>happiness.</span></h1>
+        <p class="hero-description">Temukan barang lucu dan pilihan favoritmu untuk menemani hari-harimu.</p>
+        <a href="#shop" class="shop-button">Explore Collection ↗</a>
+      </div>
+      <div class="hero-art">
+        <div class="hero-heart">♡</div>
+        <p>made with love</p>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OUR COLLECTION</p>
+          <h2>Little things, <span>big joy.</span></h2>
+        </div>
+        <p class="section-note">Pilih yang paling kamu suka ♡</p>
+      </div>
+
+      <input type="search" id="searchInput" placeholder="Cari produk favoritmu..." aria-label="Cari produk">
+
+      <div class="categories" id="categoryButtons">
+        <button class="category-button active" data-category="Semua" type="button">Semua</button>
+        <button class="category-button" data-category="Aksesoris" type="button">Aksesoris</button>
+        <button class="category-button" data-category="Lifestyle" type="button">Lifestyle</button>
+        <button class="category-button" data-category="Stationery" type="button">Stationery</button>
+        <button class="category-button" data-category="Favorit" type="button">♡ Favorit</button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="closing">
+      <h2>Simple things, <em>beautiful moments.</em></h2>
+      <p>LUMIÉ STORE menemani keseharianmu dengan produk pilihan yang simpel, nyaman, dan menarik.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo">LUMIÉ<span>.</span></a>
+    <p>Made with ♡ for your everyday moments.</p>
+    <small>© 2026 LUMIÉ STORE</small>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Keranjang belanja">
+    <div class="cart-header">
+      <div>
+        <p class="eyebrow">YOUR COLLECTION</p>
+        <h2>Your Bag <span>♡</span></h2>
+      </div>
+      <button id="closeCart" class="close-button" type="button" aria-label="Tutup keranjang">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="total-row"><span>Total</span><strong id="cartTotal">Rp0</strong></div>
+      <button id="checkoutButton" class="checkout-button" type="button">Checkout ♡</button>
+      <p class="cart-note">Thank you for shopping with us!</p>
+    </div>
+  </aside>
+
+  <div class="detail-overlay" id="detailOverlay">
+    <div class="detail-modal">
+      <button class="detail-close" id="detailClose" type="button" aria-label="Tutup detail">×</button>
+      <img id="detailImage" src="" alt="Foto produk">
+      <div class="detail-content">
+        <p class="eyebrow" id="detailCategory">KATEGORI</p>
+        <h2 id="detailName">Nama Produk</h2>
+        <h3 id="detailPrice">Rp0</h3>
+        <p id="detailDescription"></p>
+        <button id="detailAddButton" class="checkout-button" type="button">+ Tambahkan ke Bag</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
