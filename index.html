@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f5ed">
+  <meta name="description" content="Temukan produk UMKM lokal Purbalingga. Belanja produk lokal, dukung usaha masyarakat.">
+  <title>Pasar Lokal Purbalingga</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="brand">
+      <span class="brand-icon">🌿</span>
+      <span>Pasar<span class="brand-green">Lokal</span>
+        <small>PURBALINGGA</small>
+      </span>
+    </a>
+
+    <button class="cart-nav" id="openCart" aria-label="Buka keranjang">
+      🛒 <span>Keranjang</span>
+      <b id="cartCount">0</b>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">✦ BANGGA PRODUK LOKAL</span>
+        <h1>Temukan Produk Lokal <span>Istimewa.</span></h1>
+        <p>
+          Dari Purbalingga untuk Indonesia.
+          Dukung UMKM lokal dan temukan produk favoritmu di sini!
+        </p>
+        <a href="#katalog" class="btn-primary">Mulai Belanja ↗</a>
+        <div class="hero-note">💚 Belanja lokal, dukung usaha masyarakat.</div>
+      </div>
+      <div class="hero-art">
+        <img
+          src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=85"
+          alt="Aneka produk makanan lokal"
+          onerror="this.style.display='none'">
+        <div class="floating-note">
+          <span>✨</span>
+          <div>
+            <strong>Produk Pilihan</strong>
+            <small>Karya UMKM lokal</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><span>🏡</span><p><b>Produk Lokal</b><small>Karya warga Purbalingga</small></p></div>
+      <div><span>🤝</span><p><b>Dukung UMKM</b><small>Bantu usaha berkembang</small></p></div>
+      <div><span>💬</span><p><b>Pesan Mudah</b><small>Hubungi penjual langsung</small></p></div>
+    </section>
+
+    <section class="catalog section" id="katalog">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">JELAJAHI PILIHANMU</span>
+          <h2>Produk Pilihan <span>Lokal.</span></h2>
+          <p>Temukan produk favorit dari pelaku UMKM.</p>
+        </div>
+      </div>
+
+      <label class="search-box">
+        <span>⌕</span>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Cari makanan, minuman, kerajinan..."
+          autocomplete="off">
+        <button id="clearSearch" type="button" aria-label="Hapus pencarian">×</button>
+      </label>
+
+      <div class="category-list" id="categoryList">
+        <button class="category active" data-category="Semua">✨ Semua</button>
+        <button class="category" data-category="Makanan">🍘 Makanan</button>
+        <button class="category" data-category="Minuman">🥤 Minuman</button>
+        <button class="category" data-category="Kerajinan">🧺 Kerajinan</button>
+        <button class="category" data-category="Fashion">👕 Fashion</button>
+      </div>
+
+      <div class="result-info">
+        <span id="resultCount">Memuat produk...</span>
+        <span>Harga dalam Rupiah</span>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <p class="empty-state">Memuat produk...</p>
+      </div>
+    </section>
+
+    <section class="promo">
+      <div>
+        <span class="eyebrow">DUKUNG USAHA LOKAL 💚</span>
+        <h2>Belanja lokal, bangun ekonomi bersama.</h2>
+        <p>Setiap pembelian ikut mendukung perkembangan UMKM Purbalingga.</p>
+      </div>
+      <a href="#katalog" class="btn-light">Lihat Produk ↗</a>
+    </section>
+
+    <section class="about section">
+      <span class="eyebrow">TENTANG KAMI</span>
+      <h2>Mengenal lebih dekat <span>UMKM Purbalingga.</span></h2>
+      <p>
+        Pasar Lokal Purbalingga adalah konsep katalog digital
+        untuk memperkenalkan produk usaha lokal agar lebih mudah
+        ditemukan oleh masyarakat. Mari kenali dan dukung karya lokal!
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="brand footer-brand">
+      🌿 Pasar<span class="brand-green">Lokal</span>
+    </a>
+    <p>© <span id="year"></span> Pasar Lokal Purbalingga.</p>
+    <small>Bangga produk lokal Indonesia.</small>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Keranjang belanja">
+    <div class="cart-header">
+      <div>
+        <h2>Keranjang 🛒</h2>
+        <p>Periksa pesananmu di sini.</p>
+      </div>
+      <button id="closeCart" class="close-btn" aria-label="Tutup keranjang">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-state">Keranjang masih kosong.</p>
+    </div>
+
+    <div class="cart-bottom">
+      <div class="total-row">
+        <span>Total belanja</span>
+        <strong id="cartTotal">Rp0</strong>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">
+        Pesan via WhatsApp ↗
+      </button>
+      <small>Pesanan akan dikirim ke WhatsApp penjual.</small>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
